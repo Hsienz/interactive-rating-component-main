@@ -1,29 +1,30 @@
-let prevElem;
-let prevBackgroundColor;
+const setRatingBtn = (idx)=>{
+    const temp = document.getElementsByClassName('ratingBtnActive')
+    console.log(temp)
+    if( temp.length ) {
+        const activeRatingBtn = temp[0]
+        activeRatingBtn.classList.remove( 'ratingBtnActive')
+    }
+    
+    document.getElementById(`ratingBtn${idx}`).classList.add( 'ratingBtnActive' )
+}
+
 for( let i = 1; i <= 5; i ++ ) {
-    console.log(1)
-    console.log(`ratingBtn${i}`)
-    const elem = document.getElementById(`ratingBtn${i}`)
-    console.log(elem)
-    elem.addEventListener('click', (e) => {
-        if( prevElem ) {
-            prevElem.style.backgroundColor = prevBackgroundColor;
-        }
-        prevBackgroundColor = elem.style.backgroundColor
-        elem.style.backgroundColor = window.getComputedStyle(document.documentElement).getPropertyValue('--Orange');
-        prevElem = elem;
-    })
+    const elem = document.getElementById(`ratingBtn${i}`) 
+    elem.addEventListener('click', (e) => setRatingBtn(i) )
 }
 
 let elem = document.getElementById('ratingSubmitBtn');
 elem.addEventListener('click', (e)=>{
-    if( !prevElem ) {
-        alert('Rate first!')
+    const temp = document.getElementsByClassName('ratingBtnActive')
+    if( !temp.length ) {
+        alert('Please rating first!')
         return
     }
+    const activeRatingBtn = temp[0]
     let page = document.getElementById('ratingPage')
     page.style.display = 'none'
     page = document.getElementById('thankPage')
     page.style.display = 'flex'
-    document.getElementById('ratingSpan').innerHTML = prevElem.textContent
+    document.getElementById('ratingSpan').innerHTML = activeRatingBtn.textContent
 })

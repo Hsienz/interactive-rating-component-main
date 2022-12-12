@@ -68,7 +68,7 @@ html, body {
 #ratingBtnDiv {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     bottom: 10px;
 }
@@ -78,10 +78,14 @@ html, body {
     border-radius: 50%;
     background-color: var(--Light-Grey);
     border: none;
-    margin: 10px;
+    margin: 10px 0px;
     color: var(--White);
     opacity: 70%;
     transition: all 0.2s ease;
+}
+
+.ratingBtnActive {
+    background-color: var(--Orange);
 }
 
 #ratingSubmitBtn {
