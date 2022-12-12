@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Frontend Mentor | Interactive rating component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div id="page">
+				<div id="ratingPage">
+					<div id="star">
+						<img src="./images/icon-star.svg" />
+					</div>
+					<h2 id="title">How did we do?</h2>
+					<p id="description">
+						Please let us know how we did with your support request.
+						All feedback is appreciated to help us improve our
+						offering!
+					</p>
+					<div id="ratingBtnDiv">
+						<button class="ratingBtn" id="ratingBtn1">1</button>
+						<button class="ratingBtn" id="ratingBtn2">2</button>
+						<button class="ratingBtn" id="ratingBtn3">3</button>
+						<button class="ratingBtn" id="ratingBtn4">4</button>
+						<button class="ratingBtn" id="ratingBtn5">5</button>
+					</div>
+					<button type="button" id="ratingSubmitBtn">Submit</button>
+				</div>
+				<div id="thankPage">
+					<div id="thankIllust">
+						<img src="./images/illustration-thank-you.svg" alt="">
+					</div>
+					<h3 id="selectRating">
+						You selected
+						<span id="ratingSpan"></span>
+						out of 5
+					</h3>
+					<h2 id="thankTitle">Thank you!</h2>
+					<p id="thankDescription">
+						We appreciate you taking the time to give a rating. If
+						you ever need more support, don’t hesitate to get in
+						touch!
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">hsieneis</a>.
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>

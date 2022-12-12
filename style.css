@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Orange: hsl(25, 97%, 53%);
+}
+html, body {
+    background-color: var(--Very-Dark-Blue);
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    font-weight: 400px;
+}
+#star {
+    width: 50px;
+    height: 50px;
+    background-color: var(--Light-Grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 70%;
+}
+#thankIllust {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#selectRating {
+    color: var(--Orange);
+    background-color: var(--Very-Dark-Blue);
+    padding: 7px 20px;
+    border-radius: 20px;
+    opacity: 70%;
+}
+#description {
+    color: var(--Light-Grey)
+}
+#title {
+    font-weight: 700px;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+}
+#page {
+    background-color: var(--Dark-Blue);
+    width: 350px;
+    height: 350px;
+    border-radius: 10%;
+    padding: 50px;
+}
+#ratingPage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#ratingBtnDiv {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ratingBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--Light-Grey);
+    border: none;
+    margin: 10px;
+    color: var(--White);
+    opacity: 70%;
+    transition: all 0.2s ease;
+}
+
+#ratingSubmitBtn {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: var(--Orange);
+    color: var(--White);
+    border: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+#ratingSubmitBtn:hover {
+    background-color:var(--White);
+    color: var(--Orange);
+}
+
+#thankPage {
+    background-color: var(--Dark-Blue);
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+#thankDescription {
+    color:var(--Light-Grey);
+}
