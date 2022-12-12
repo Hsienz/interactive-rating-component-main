@@ -19,6 +19,7 @@ let elem = document.getElementById('ratingSubmitBtn');
 elem.addEventListener('click', (e)=>{
     if( !prevElem ) {
         alert('Rate first!')
+        return
     }
     let page = document.getElementById('ratingPage')
     page.style.display = 'none'
